@@ -1,704 +1,795 @@
 <!DOCTYPE html>
-<!--
-	Solitude by TEMPLATE STOCK
-	templatestock.co @templatestock
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
-
-
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DevFolio - Developer Portfolio Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
 
-    <title>Andrea Cacioli</title>
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/elusive-webfont.css">
-    <link href="css/animate.css" rel="stylesheet">
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <body data-spy="scroll" data-target=".navbar" data-offset="51">
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">DevFolio</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <script src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#service" class="nav-item nav-link">Service</a>
+                        <a href="#experience" class="nav-item nav-link">Experience</a>
+                        <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                        <a href="#price" class="nav-item nav-link">Price</a>
+                        <a href="#review" class="nav-item nav-link">Review</a>
+                        <a href="#team" class="nav-item nav-link">Team</a>
+                        <a href="#blog" class="nav-item nav-link">Blog</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-</head>
 
-<body data-spy="scroll" data-offset="0" data-target="#navbar-main">
+        <!-- Hero Start -->
+        <div class="hero" id="home">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <p>I'm</p>
+                                <h1>Kate Winslet</h1>
+                                <h2></h2>
+                                <div class="typed-text">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+                            </div>
+                            <div class="hero-btn">
+                                <a class="btn" href="">Hire Me</a>
+                                <a class="btn" href="">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image">
+                            <img src="img/hero.png" alt="Hero Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
 
 
-    <div id="navbar-main">
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top">
+        <!-- About Start -->
+        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="img/about.jpg" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-header text-left">
+                                <p>Learn About Me</p>
+                                <h2>10 Years Experience</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida
+                                </p>
+                            </div>
+                            <div class="skills">
+                                <div class="skill-name">
+                                    <p>Web Design</p><p>85%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>Web Development</p><p>95%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>Apps Design</p><p>90%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="skill-name">
+                                    <p>Apps Development</p><p>85%</p>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <a class="btn" href="">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+        
+        <!-- Service Start -->
+        <div class="service" id="service">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	          	<i class="el-icon-lines"></i>
-	          </button>
-                    <a class="navbar-brand hidden-xs hidden-sm" href="#home">
-                        <h1>Andrea Cacioli</h1>
-                    </a>
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>What I do</p>
+                    <h2>Awesome Quality Services</h2>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#home" class="smoothScroll">Home</a></li>
-                        <li> <a href="#abouttop" class="smoothScroll">About Me</a></li>
-                        <li> <a href="#services" class="smoothScroll">What I Do</a></li>
-                        <li> <a href="#team" class="smoothScroll">References</a></li>
-                        <li> <a href="#portfolio" class="smoothScroll">What I Have Done</a></li>
-                        <li> <a href="#blog" class="smoothScroll">Info</a></li>
-                        <li> <a href="#contact" class="smoothScroll">Contact</a></li>
-                    </ul>
-                </div>
-                <!--/.nav-collapse -->
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- ==== HEADERWRAP ==== -->
-    <div id="headerwrap" id="home" name="home">
-        <header class="clearfix">
-            <h1 class="animated bounceIn">Nice to meet you!</h1>
-            <p class="animated slideInLeft">This is Andrea Cacioli's website.</p>
-            <p class="animated slideInRight">You can think of this website as a collection of what I'm most proud of.</p>
-            <a href="#abouttop" class="btn homebtn smoothScroll">Get to know me!<i class="el-icon-chevron-down homeicon"></i></a>
-        </header>
-    </div>
-    <!-- /headerwrap -->
-
-    <!--  SERVICES -->
-    <div class="greywrap" id="abouttop">
-        <div class="container" id="about" name="about">
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-6 callout">
-                    <i class="material-icons">code</i>
-                    <div class="col-md-9 fade-up service-info">
-
-                        <h2>I like coding things</h2>
-
-                        <p>Coding has always been my <b>passion</b> and, right now, I'm looking to turn this passion into a job</p>
-                        <p>In the following sections you'll be able to see some of my works and, if you're interested, you can get to know me a little bit better on this aspect of my life.</p>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-laptop"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Web Design</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-4 col-sm-4 col-xs-6 callout">
-                    <i class="material-icons">lightbulb</i>
-                    <div class="col-md-9 fade-up service-info">
-                        <h2>Learning and teaching</h2>
-                        <p>As a learner I always felt the need to give knowledge to others.I firmly believe that no one ever stops learning and so should always be prepared to learn something new.
-                        </p>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fa fa-laptop-code"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Web Development</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-4 col-sm-4 col-xs-6 callout">
-                    <i class="material-icons">groups</i>
-                    <div class="col-md-9 fade-up service-info">
-                        <div class="fade-up">
-                            <h2>Leadership Attitude</h2>
-                            <p> I naturally tend to be a leader. Every project I take part in is usually aided by this propension.</p>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fab fa-android"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Apps Design</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fab fa-apple"></i>
+                            </div>
+                            <div class="service-text">
+                                <h3>Apps Development</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- ==== ABOUT ==== -->
-    <div class="container" id="about" name="about">
-        <div class="row white">
-            <h1 class="fade-down centered">A LITTLE ABOUT ME</h1>
-            <hr>
-
-            <div class="fade-up col-md-6">
-                <p>
-                    I am a Computer Science student at <b>UniTo</b> who is currently settled in Turin, Italy. 
-                </p>
-                <p>
-                    CS has revealed to be my passion ever since I was little: an outstanding performance at the computer science Olympics in Italy really paved the way to my future.
-                    At the time I was the <b>second best programmer of my age in the whole country</b>. A lot of time has passed since then, though, and things have changed very much: now I completely abandoned competitive programming to study it in a more mathematical and the thorough way.
-                    My marks are high and my interest towards upcoming technology is sky high.
-                </p>
-            </div>
-            <!-- col-md-6 -->
-
-            <div class="fade-up col-md-6">
-                <p>
-                    In my free time I like to keep updated with the news about the things that I'm most interested in like video games, nature, and technology.
-                    Having said that, something I really enjoy doing is making things, this interest has led me to develop a decent skillset at <b>embedded programming for microcontrollers</b> like Arduino, RaspberryPi and equivalents.
-                </p>
-                <p>
-                    Another important aspect of my life is video-games and the <b>video games industry</b>. Hopefully one day I'll be able to work as a game developer and I really wish I could create something fun for the rest of the world.
-                </p>
-            </div>
-            <!-- col-md-6 -->
-        </div>
-        <!-- row -->
-    </div>
-    <!-- container -->
-
-
-    <!-- ==== SECTION DIVIDER2 -->
-    <section class="section-divider textdivider divider2">
-        <div class="container">
-            <h1 class="fade-down">HERE IS THE PROOF</h1>
-            <hr>
-            <div class="col-md-3">
-                <span class="counter">100</span>
-                <span class="counter-desc">Percent Focus</span>
-            </div>
-            <div class="col-md-3">
-                <span class="counter">1000</span>
-                <span class="counter-desc">Minimum Saving</span>
-            </div>
-            <div class="col-md-3">
-                <span class="counter">10000</span>
-                <span class="counter-desc">Ideas</span>
-            </div>
-            <div class="col-md-3">
-                <span class="counter">100000</span>
-                <span class="counter-desc">Profit</span>
-            </div>
-        </div>
-        <!-- container -->
-    </section>
-    <!-- section -->
-
-
-
-
-    <!-- ==== TEAM MEMBERS ==== -->
-    <div class="container section" id="team" name="team">
-        <br>
-        <div class="row white centered">
-            <h1 class="fade-down centered">MEET THE DELTA TEAM</h1>
-            <hr class="fade-down title-mb">
-            <div class="col-md-4 ">
-                <div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-                    <img class="img team-image" src="images/team01.jpg" alt="">
-                    <a href="#" class="team-social twitter"><i class="el-icon-twitter"></i></a>
-                    <a href="#" class="team-social facebook"><i class="el-icon-facebook"></i></a>
-                    <a href="#" class="team-social flickr"><i class="el-icon-flickr"></i></a>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
-                    <h4>Danny Jones</h4>
-                    <p>TRemain valley who mrs uneasy remove wooded him you. Her questions favourite him concealed. We to wife face took he. The taste begin early old why since dried can first. Prepared as or humoured formerly. Evil mrs true get post. Express
-                        village evening prudent my as ye hundred forming..</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-                    <img class="img team-image" src="images/team02.jpg" alt="">
-                    <a href="#" class="team-social twitter"><i class="el-icon-twitter"></i></a>
-                    <a href="#" class="team-social facebook"><i class="el-icon-facebook"></i></a>
-                    <a href="#" class="team-social flickr"><i class="el-icon-flickr"></i></a>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
-                    <h4>John Smith</h4>
-                    <p>Smile spoke total few great had never their too. Amongst moments do in arrived at my replied. Fat weddings servants but man believed prospect. Companions understood is as especially pianoforte connection introduced.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="col-md-3 col-sm-3 col-xs-3 fade-down team-image-wrapper">
-                    <img class="img team-image" src="images/team03.jpg" alt="">
-                    <a href="#" class="team-social twitter"><i class="el-icon-twitter"></i></a>
-                    <a href="#" class="team-social facebook"><i class="el-icon-facebook"></i></a>
-                    <a href="#" class="team-social flickr"><i class="el-icon-flickr"></i></a>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-9 fade-up team-info">
-                    <h4>Lowri Roberts</h4>
-                    <p>In felicity up to graceful mistaken horrible consider. Abode never think to at. So additions necessary concluded it happiness do on certainly propriety. On in green taken do offer witty of.</p>
-                </div>
-            </div>
-
-        </div>
-        <!-- row -->
-    </div>
-    <!-- container -->
-
-    <!-- ==== GREYWRAP ==== -->
-    <div class="greywrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 centered fade-up">
-                    <img class="img-responsive" src="images/macbook.png" align="">
-                </div>
-                <div class="col-md-6 fade-down">
-                    <h2>Could You Be The Next Delta Ninja?</h2>
-                    <p>Often voice and the spoke. No shewing fertile village equally prepare up females as an. That do an case an what plan hour of paid. Invitation is unpleasant astonished preference attachment friendship on</p>
-                    <p><a class="btn btn-success">Contact Us</a></p>
-                </div>
-            </div>
-            <!-- row -->
-        </div>
-        <br>
-        <br>
-    </div>
-    <!-- greywrap -->
-
-    <!-- ==== SECTION DIVIDER3 -->
-    <section class="section-divider textdivider divider3">
-        <div class="container">
-            <h1 class="fade-down">DELTA TEAM WILL HELP YOU GROW</h1>
-            <hr>
-            <p class="fade-up">Bringing him smallest met few now returned surprise learning jennings. Objection delivered eagerness he exquisite at do in. Warmly up he nearer mr merely me.</p>
-        </div>
-        <!-- container -->
-    </section>
-    <!-- section -->
-
-    <!-- ==== PORTFOLIO ==== -->
-    <div id="portfolio" name="portfolio">
-        <br>
-        <div class="row white">
-            <h1 class="fade-down centered">SOME OF WHAT WE HAVE DONE</h1>
-            <hr class="fade-down title-mb">
-        </div>
-        <!-- /row -->
-        <div class="">
-            <div class="">
-
-                <div id="portfolio-carousel">
-                    <!-- PORTFOLIO IMAGE 1 -->
-                    <div class="fade-up col-md-4 ">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio01.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT ONE</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
+        <!-- Service End -->
+        
+        
+         <!-- Experience Start -->
+        <div class="experience" id="experience">
+            <div class="container">
+                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Resume</p>
+                    <h2>Working Experience</h2>
+                </header>
+                <div class="timeline">
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
                         </div>
-                        <!-- /grid-mask -->
                     </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 2 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio02.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT TWO</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
                         </div>
-                        <!-- /grid-mask -->
                     </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 3 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio03.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT THREE</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
                         </div>
-                        <!-- /grid-mask -->
                     </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 4 -->
-                    <div class="fade-up col-md-4 ">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio04.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT FOUR</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
                         </div>
-                        <!-- /grid-mask -->
                     </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 5 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio05.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT FIVE</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
+                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
                         </div>
-                        <!-- /grid-mask -->
                     </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 6 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio06.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT SIX</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
+                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+                        <div class="timeline-text">
+                            <div class="timeline-date">2045 - 2050</div>
+                            <h2>Web Developer</h2>
+                            <h4>Soft Agency, San Francisco, CA</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                            </p>
                         </div>
-                        <!-- /grid-mask -->
                     </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 1 -->
-                    <div class="fade-up col-md-4 ">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio01.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT SEVEN</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
-                        </div>
-                        <!-- /grid-mask -->
-                    </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 2 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio02.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT EIGHT</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
-                        </div>
-                        <!-- /grid-mask -->
-                    </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 3 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio03.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT NINE</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
-                        </div>
-                        <!-- /grid-mask -->
-                    </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 4 -->
-                    <div class="fade-up col-md-4 ">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio04.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT TEN</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
-                        </div>
-                        <!-- /grid-mask -->
-                    </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 5 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio05.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT ELEVEN</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
-                        </div>
-                        <!-- /grid-mask -->
-                    </div>
-                    <!-- /col -->
-
-                    <!-- PORTFOLIO IMAGE 6 -->
-                    <div class="fade-up col-md-4">
-                        <div class="grid mask">
-                            <figure>
-                                <img class="img-responsive" src="images/folio06.jpg" alt="">
-                                <figcaption>
-                                    <h5>PROJECT TWELVE</h5>
-                                    <a href="single-project.html" class="btn btn-primary btn-lg"><i class="el-icon-link"></i></a>
-                                    <a href="images/folio01.jpg" class="btn btn-primary btn-lg launch-lb"><i class="el-icon-zoom-in"></i></a>
-                                </figcaption>
-                                <!-- /figcaption -->
-                            </figure>
-                            <!-- /figure -->
-                        </div>
-                        <!-- /grid-mask -->
-                    </div>
-                    <!-- /col -->
-
                 </div>
-                <!-- /carousel -->
-            </div>
-            <!-- /row -->
-
-        </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
-
-    <!-- ==== SECTION DIVIDER4 ==== -->
-    <section class="section-divider textdivider divider4">
-        <div class="container">
-            <h1 class="fade-down">YOU HAVE THE POTENTIAL</h1>
-            <hr>
-            <p class="fade-up">Bringing him smallest met few now returned surprise learning jennings. Objection delivered eagerness he exquisite at do in. Warmly up he nearer mr merely me.</p>
-        </div>
-        <!-- container -->
-    </section>
-    <!-- section -->
-
-    <!-- ==== BLOG ==== -->
-    <div class="container" id="blog" name="blog">
-        <br>
-        <div class="row white">
-            <h1 class="fade-down centered">WE ARE STORYTELLERS</h1>
-            <hr class="fade-down title-mb">
-        </div>
-        <!-- /row -->
-
-        <div class="row">
-
-            <div class="col-md-6 blog-bg">
-                <div class="img-wrapper">
-                    <img class="img fade-down" src="images/bg1.jpg">
-                    <div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-                    <img class="img" src="images/team01.jpg">
-                    <h4>John Smith</h4>
-                    <h5>Published April 7th.</h5>
-                </div>
-                <div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-                    <h2>A Beautiful Story</h2>
-                    <p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-                    <p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client�s brand.</p>
-                    <p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-                </div>
-            </div>
-            <!-- /col -->
-
-            <div class="col-md-6 blog-bg">
-                <div class="img-wrapper">
-                    <img class="img fade-down" src="images/bg2.jpg">
-                    <div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-                    <img class="img" src="images/team02.jpg">
-                    <h4>Dan Jones</h4>
-                    <h5>Published April 4th.</h5>
-                </div>
-                <div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-                    <h2>A Beautiful Story</h2>
-                    <p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-                    <p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client�s brand.</p>
-                    <p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-                </div>
-            </div>
-            <!-- /col -->
-
-            <div class="col-md-6 blog-bg">
-                <div class="img-wrapper">
-                    <img class="img fade-down" src="images/bg3.jpg">
-                    <div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-                    <img class="img" src="images/team03.jpg">
-                    <h4>John Smith</h4>
-                    <h5>Published April 2nd.</h5>
-                </div>
-                <div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-                    <h2>A Beautiful Story</h2>
-                    <p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-                    <p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client�s brand.</p>
-                    <p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-                </div>
-            </div>
-            <!-- /col -->
-
-            <div class="col-md-6 blog-bg">
-                <div class="img-wrapper">
-                    <img class="img fade-down" src="images/bg4.jpg">
-                    <div class="img-mask"><a href="single-post.htm" class="mask-icon"><i class="el-icon-link"></i></a></div>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-2 blog-meta fade-down">
-                    <img class="img" src="images/team04.jpg">
-                    <h4>John Smith</h4>
-                    <h5>Published April 1st.</h5>
-                </div>
-                <div class="col-md-10 col-sm-10 col-xs-10 blog-content fade-up">
-                    <h2>A Beautiful Story</h2>
-                    <p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
-                    <p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client�s brand.</p>
-                    <p><a href="single-post.html" class="btn btn-success">Read More</a></p>
-                </div>
-            </div>
-            <!-- /col -->
-
-        </div>
-        <!-- /row -->
-        <br>
-        <br>
-    </div>
-    <!-- /container -->
-
-
-    <!-- ==== SECTION DIVIDER6 ==== -->
-    <section class="section-divider textdivider divider6">
-        <div class="container">
-            <h1 class="fade-down">CRAFTED IN NEW YORK, USA.</h1>
-            <hr>
-            <div class="fade-up">
-                <p>Times Square, New York</p>
-                <p>+12 12345 123</p>
             </div>
         </div>
-        <!-- container -->
-    </section>
-    <!-- section -->
-
-    <div class="container" id="contact" name="contact">
-        <div class="row row white">
-            <br>
-            <h1 class="centered fade-down">THANKS FOR VISITING US</h1>
-            <hr class="fade-down title-mb">
-            <div class="col-md-4 fade-up">
-                <h3>Contact Information</h3>
-                <p><span class="icon icon-home"></span>Time Square, New York<br/>
-                    <span class="icon icon-phone"></span>+12 12345 123<br/>
-                    <span class="icon icon-mobile"></span>+12 12345 123<br/>
-                    <span class="icon icon-envelop"></span> <a href="#">email@templatestock.com</a> <br/>
-                    <span class="icon icon-twitter"></span> <a href="#">@templatestock.com</a> <br/>
-                    <span class="icon icon-facebook"></span> <a href="#">templatestock</a> <br/>
-                </p>
+        <!-- Job Experience End -->
+        
+        
+        <!-- Banner Start -->
+        <div class="banner wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Reasonable Price</p>
+                    <h2>Get A <span>Special</span> Price</h2>
+                </div>
+                <div class="container banner-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                    </p>
+                    <a class="btn">Pricing Plan</a>
+                </div>
             </div>
-            <!-- col -->
-
-            <div class="col-md-4 fade-up">
-                <h3>Newsletter</h3>
-                <p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
-
-                <form class="form-horizontal" role="form">
-                    <div class="form-group">
-                        <label for="inputEmail1" class="col-md-4 control-label"></label>
-                        <div class="col-md-10">
-                            <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="text1" class="col-md-4 control-label"></label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="text1" placeholder="Your Name">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-10">
-                            <button type="submit" class="btn btn-success">Sign in</button>
-                        </div>
-                    </div>
-                </form>
-                <!-- form -->
-
-            </div>
-            <!-- col -->
-
-            <div class="col-md-4 fade-up">
-                <h3>Support Us</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-                    book.
-                </p>
-            </div>
-            <!-- col -->
-
         </div>
-        <!-- row -->
+        <!-- Banner End -->
 
-    </div>
-    <!-- container -->
 
-    <div id="footerwrap">
-        <div class="container">
-            <div class="btt-wrapper fade-down"><a class="btt-link smoothScroll" href="#home"><i class="el-icon-chevron-up"></i></a></div>
-            <ul id="footer-social" class="fade-down">
-                <li><a href="#" target="_blank" title="Like Us"><i class="el-icon-twitter"></i></a></li>
-                <li><a href="#" target="_blank" title="Like Us"><i class="el-icon-facebook"></i></a></li>
-                <li><a href="#" target="_blank" title="Like Us"><i class="el-icon-googleplus"></i></a></li>
-                <li><a href="#" target="_blank" title="Like Us"><i class="el-icon-flickr"></i></a></li>
-                <li><a href="#" target="_blank" title="Like Us"><i class="el-icon-youtube"></i></a></li>
-                <li><a href="#" target="_blank" title="Like Us"><i class="el-icon-rss"></i></a></li>
-            </ul>
-            <h4 class="fade-up">Created by <a href="http://templatestock.co">Template Stock</a> - Copyright 2016</h4>
+        <!-- Portfolio Start -->
+        <div class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Portfolio</p>
+                    <h2>My Excellent Portfolio</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="portfolio-filter">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-1">Web Design</li>
+                            <li data-filter=".filter-2">Mobile Apps</li>
+                            <li data-filter=".filter-3">Game Dev</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row portfolio-container">
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-img">
+                                <img src="img/portfolio-1.jpg" alt="Image">
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>eCommerce Website</h3>
+                                <a class="btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-img">
+                                <img src="img/portfolio-2.jpg" alt="Image">
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Product Landing Page</h3>
+                                <a class="btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-img">
+                                <img src="img/portfolio-3.jpg" alt="Image">
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>JavaScript quiz game</h3>
+                                <a class="btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-img">
+                                <img src="img/portfolio-4.jpg" alt="Image">
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>JavaScript drawing</h3>
+                                <a class="btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-img">
+                                <img src="img/portfolio-5.jpg" alt="Image">
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Social Mobile Apps</h3>
+                                <a class="btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="1s">
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-img">
+                                <img src="img/portfolio-6.jpg" alt="Image">
+                            </div>
+                            <div class="portfolio-text">
+                                <h3>Company Website</h3>
+                                <a class="btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">+</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        <!-- Portfolio End -->
+        
+        
+        <!-- Banner Start -->
+        <div class="banner wow zoomIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Awesome Discount</p>
+                    <h2>Get <span>30%</span> Discount</h2>
+                </div>
+                <div class="container banner-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. 
+                    </p>
+                    <a class="btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+        <!-- Banner End -->
+        
+        
+        <!-- Price Start -->
+        <div class="price" id="price">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Pricing Plan</p>
+                    <h2>Affordable Price</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Basic</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small>49<span>/ mo</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Bootstrap 4</li>
+                                        <li>Font Awesome 5</li>
+                                        <li>Responsive Design</li>
+                                        <li>Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="price-item featured-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Standard</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small>99<span>/ mo</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Bootstrap 4</li>
+                                        <li>Font Awesome 5</li>
+                                        <li>Responsive Design</li>
+                                        <li>Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="price-item">
+                            <div class="price-header">
+                                <div class="price-title">
+                                    <h2>Premium</h2>
+                                </div>
+                                <div class="price-prices">
+                                    <h2><small>$</small>149<span>/ mo</span></h2>
+                                </div>
+                            </div>
+                            <div class="price-body">
+                                <div class="price-description">
+                                    <ul>
+                                        <li>Bootstrap 4</li>
+                                        <li>Font Awesome 5</li>
+                                        <li>Responsive Design</li>
+                                        <li>Browser Compatibility</li>
+                                        <li>Easy To Use</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price-footer">
+                                <div class="price-action">
+                                    <a class="btn" href="">Order Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Price End -->
+        
+        
+        <!-- Testimonial Start -->
+        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
+            <div class="container">
+                <div class="testimonial-icon">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/testimonial-1.jpg" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+                            </p>
+                            <h3>Customer Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/testimonial-2.jpg" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+                            </p>
+                            <h3>Customer Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-img">
+                            <img src="img/testimonial-3.jpg" alt="Image">
+                        </div>
+                        <div class="testimonial-text">
+                            <p>
+                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+                            </p>
+                            <h3>Customer Name</h3>
+                            <h4>Profession</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
-</body>
 
+        <!-- Team Start -->
+        <div class="team" id="team">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Team</p>
+                    <h2>Expert Team Members</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.0s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-1.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Mollie Ross</h2>
+                                <h4>Web Designer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-2.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Dylan Adams</h2>
+                                <h4>Web Developer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-3.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Jennifer Page</h2>
+                                <h4>Apps Designer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img src="img/team-4.jpg" alt="Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Josh Dunn</h2>
+                                <h4>Apps Developer</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec adipis elit. Etiam accum lacus
+                                </p>
+                                <div class="team-social">
+                                    <a class="btn" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-linkedin-in"></i></a>
+                                    <a class="btn" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+        
+        <!-- Contact Start -->
+        <div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8">
+                            <div class="contact-form">
+                                <div id="success"></div>
+                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Blog Start -->
+        <div class="blog" id="blog">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>From Blog</p>
+                    <h2>Latest Articles</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="blog-img">
+                                <img src="img/blog-1.jpg" alt="Blog">
+                            </div>
+                            <div class="blog-text">
+                                <h2>Lorem ipsum dolor sit amet</h2>
+                                <div class="blog-meta">
+                                    <p><i class="far fa-user"></i>Admin</p>
+                                    <p><i class="far fa-list-alt"></i>Web Design</p>
+                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                    <p><i class="far fa-comments"></i>5</p>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
+                                </p>
+                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="blog-img">
+                                <img src="img/blog-2.jpg" alt="Blog">
+                            </div>
+                            <div class="blog-text">
+                                <h2>Lorem ipsum dolor sit amet</h2>
+                                <div class="blog-meta">
+                                    <p><i class="far fa-user"></i>Admin</p>
+                                    <p><i class="far fa-list-alt"></i>Apps Design</p>
+                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
+                                    <p><i class="far fa-comments"></i>10</p>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Nullam commodo mattis mi. Nullam eu erat lectus. Proin viverra risus vitae luctus. Proin ut ante, vitae sapien. Fusce sem ac erat rhoncus, ornare mattis nisl massa et eros vitae pulvin
+                                </p>
+                                <a class="btn" href="">Read More <i class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Kate Winslet</h2>
+                        <h3>123 Street, New York, USA</h3>
+                        <div class="footer-menu">
+                            <p>+012 345 67890</p>
+                            <p>info@example.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
 </html>
