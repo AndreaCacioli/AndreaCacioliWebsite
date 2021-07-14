@@ -1,4 +1,42 @@
 /*******************************/
+/********* My Additions *********/
+/*******************************/
+
+.social {
+    display: flex;
+    height: 100px;
+    font-size: 0;
+    justify-content: flex-end;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+    font-size: 64px;
+    color: #ffffff;
+    border-right: 1px solid rgba(255, 255, 255, .15);
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.social a:first-child {
+    border-left: 1px solid rgba(255, 255, 255, .15);
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+.social a:hover {
+    color: black;
+    background: #ffffff;
+}
+
+
+
+
+/*******************************/
 /********* General CSS *********/
 /*******************************/
 body {
