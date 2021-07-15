@@ -13,9 +13,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100%;
-    font-size: 64px;
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
     color: #ffffff;
     border-right: 1px solid rgba(255, 255, 255, .15);
     border-top: 1px solid rgba(255, 255, 255, .15);
@@ -375,6 +375,7 @@ a:focus {
     
     .hero .hero-content {
         padding: 0 15px;
+        align-items: center; /*Centered socials in mobile*/
     }
     
     .hero .hero-text p {
