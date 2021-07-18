@@ -41,6 +41,29 @@
 }
 
 
+.inputs-wrapper{
+    margin-left: 20px;
+    margin-right: 50px;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    -webkit-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    -o-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    transition: opacity .3s ease-out, visibility 0s linear .3s;
+    z-index: 999;
+}
+.inputs > div{
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 1px;  /* and that, will result in a 10px gap */
+}
+
+
+
 
 /*******************************/
 /********* General CSS *********/
