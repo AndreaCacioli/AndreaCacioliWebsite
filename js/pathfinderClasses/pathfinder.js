@@ -1,10 +1,17 @@
 var canvas;
 var button;
+var slider1;
+var slider2;
 
+const bgCol = 90;
+const XOffset = 100;
+const YOffset = 200;
 
-var x = 5;
-var y = 5;
+var x;
+var y;
+var matrix;
 
+var maxY = 50;
 var topOffset = 300;
 
 function setup()
@@ -17,8 +24,8 @@ function setup()
     button.addClass('btn');
 
 
-   var slider1;
-   slider1 = createSlider(10, 500, 50);
+   
+   slider1 = createSlider(10, 50, 30);
    slider1.position(50, 50);
    slider1.style('width', '200px');
    slider1.input(function()
@@ -27,8 +34,8 @@ function setup()
        createTable();
    });
 
-   var slider2;
-   slider2 = createSlider(10, 500, 50);
+   
+   slider2 = createSlider(10, maxY, 10);
    slider2.position(350, 50);
    slider2.style('width', '200px');
    slider2.input(function()
@@ -36,18 +43,12 @@ function setup()
        y = slider2.value();
        createTable();
    });
-}
 
-function createTable()
-{
-    let h = height - topOffset;
-    let w = width;
-    let matrix = new Grid(x,y);
-}
 
-function draw()
-{
-    background(90);
+   x = slider1.value();
+   y = slider2.value();
+   background(bgCol);
+   createTable();
 }
 
 function windowResized()
@@ -55,4 +56,5 @@ function windowResized()
     resizeCanvas(windowWidth - 10, windowHeight - 10);
     canvas.position(5,5);
     button.position((width - 100), height/20);
+    createTable();
 }

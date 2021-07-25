@@ -2,20 +2,17 @@ class Grid
 {
     constructor(height, width)
     {
-        this.nodes = [
-
-        ];
+        this.nodes = [];
         for(let i = 0; i < height; i++)
         {
             this.nodes.push([]);
             for(let j  = 0; j < width; j++)
             {
-                let n = new Node();
-                n.id = i * height + j;
+                var n = new Node();
+                n.id = i * width + j;
                 this.nodes[i].push(n);
             }
         }
-        console.log('added nodes');
         for(let i = 0; i < height; i++)
         {
             for(let j  = 0; j < width; j++)
@@ -60,10 +57,26 @@ class Grid
                         n.neighbors.push(this.nodes[i-1][j]);  //Up
                     }
                 }
-
-                console.log('done node:');
-                console.log(n.id);
             }
         }
     }
+}
+
+function createTable()
+{
+    background(bgCol);
+    matrix = new Grid(x,y);
+    strokeWeight(4);
+    stroke('black');
+    let sizeX = (width - 2*XOffset) / x;
+    let sizeY = (height - 1.5*YOffset) / y;
+    for(let i = 0; i < x;i++)
+    {
+        for(let j = 0; j < y; j++)
+        {
+            let startx = XOffset + i * sizeX;
+            let starty = YOffset + j * sizeY;
+            rect(startx, starty, sizeX, sizeY, 10);
+        }
+    } 
 }
