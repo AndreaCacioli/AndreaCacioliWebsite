@@ -5,5 +5,6 @@ class Node
         this.neighbors = [];
         this.visited = false;
         this.id = 0;
+        this.obstacle = false;
     }
 }

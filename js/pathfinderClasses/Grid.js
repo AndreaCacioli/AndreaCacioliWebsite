@@ -1,26 +1,29 @@
+let sizeX;
+let sizeY;
+
 class Grid
 {
     constructor(height, width)
     {
         this.nodes = [];
-        for(let i = 0; i < height; i++)
+        for(let i = 0; i < y; i++)
         {
             this.nodes.push([]);
-            for(let j  = 0; j < width; j++)
+            for(let j  = 0; j < x; j++)
             {
                 var n = new Node();
                 n.id = i * width + j;
                 this.nodes[i].push(n);
             }
         }
-        for(let i = 0; i < height; i++)
+        for(let i = 0; i < y; i++)
         {
-            for(let j  = 0; j < width; j++)
+            for(let j  = 0; j < x; j++)
             {
                 let n = this.nodes[i][j];
 
                 //Central nodes
-                if(i > 0 && i < height-1 && j > 0 && j < width - 1)
+                if(i > 0 && i < y-1 && j > 0 && j < x - 1)
                 {
                     n.neighbors.push(this.nodes[i-1][j]);  //Up
                     n.neighbors.push(this.nodes[i][j-1]);  //Left
@@ -28,7 +31,7 @@ class Grid
                     n.neighbors.push(this.nodes[i][j+1]);  //Right
                 }
                 //lateral nodes
-                else if(j == 0 || j == width - 1)
+                else if(j == 0 || j == x - 1)
                 {
                     if(j == 0)
                     {
@@ -46,7 +49,7 @@ class Grid
                     }
                 }
                 //Top and bottom nodes
-                else if(i == 0 || i == height - 1)
+                else if(i == 0 || i == y - 1)
                 {
                     n.neighbors.push(this.nodes[i][j-1]);  //Left
                     n.neighbors.push(this.nodes[i][j+1]);  //Right
@@ -65,17 +68,34 @@ class Grid
 function createTable()
 {
     background(bgCol);
-    matrix = new Grid(x,y);
+    createTexts();
+
+    console.log('Rows/Y: ' + y + ' Cols/X: ' + x);
+    matrix = new Grid(y,x);
     strokeWeight(4);
     stroke('black');
-    let sizeX = (width - 2*XOffset) / x;
-    let sizeY = (height - 1.5*YOffset) / y;
-    for(let i = 0; i < x;i++)
+    drawTable(matrix);
+}
+
+function drawTable(matrix)
+{
+    sizeX = (width - 2*XOffset) / x;
+    sizeY = (height - 2*YOffset) / y;
+    
+    for(let i = 0; i < y;i++)
     {
-        for(let j = 0; j < y; j++)
+        for(let j = 0; j < x; j++)
         {
-            let startx = XOffset + i * sizeX;
-            let starty = YOffset + j * sizeY;
+            let startx = XOffset + j * sizeX;
+            let starty = YOffset + i * sizeY;
+            if(matrix.nodes[i][j].obstacle)
+            {
+                fill(60,60,60);
+            }
+            else
+            {
+                fill(255,255,255);
+            }
             rect(startx, starty, sizeX, sizeY, 10);
         }
     } 
