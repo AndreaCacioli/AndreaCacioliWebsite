@@ -4,12 +4,37 @@ var button;
 var slider1;
 var slider2;
 var radio;
+var columnText;
+var rowText;
 ///////////////////////
 
 ///// Visual constants ///////
 const bgCol = 0;
-const XOffset = 50;
-const YOffset = 150;
+var XOffset;
+var YOffset;
+
+var okBtnPositionX;
+var okBtnPositionY;
+
+var slider1PosX;
+var slider1PosY;
+var slider1Width;
+
+var slider2PosX;
+var slider2PosY;
+var slider2Width;
+
+var radioButtonPosX;
+var radioButtonPosY;
+var radioButtonTextSize;
+
+var columnTextSize;
+var columnTextPosX;
+var columnTextPosY;
+var rowTextSize;
+var rowTextPosX;
+var rowTextPosY;
+
 /////////////////////////////
 
 
@@ -24,10 +49,6 @@ var lastEnd;
 ////////////////////////////
 
 
-///// Parameter variables ///////
-var maxY = 50;
-////////////////////////////////
-
 function setup()
 {
     createInputs();
@@ -39,9 +60,7 @@ function setup()
 
 function windowResized()
 {
-    resizeCanvas(windowWidth - 10, windowHeight - 10);
-    canvas.position(5,5);
-    button.position((width - 100), height/20);
+    createInputs();
     createTable();
 }
 
@@ -131,22 +150,74 @@ function draw()
     }
 }
 
-function createInputs() //A visuals creating function
+function reloadUI()
 {
+    ///// Visual constants ///////
+    okBtnPositionX = (width - 100);
+    okBtnPositionY = height/20;
+
+    slider1PosX = 0.1497005988023952 * width;
+    slider1PosY = 0.04712041884816754 * height;
+    slider1Width = 0.11976047904191617 * width;
+
+    slider2PosX = 0.41916167664670656 * width;
+    slider2PosY = 0.04712041884816754 * height;
+    slider2Width = 0.11976047904191617 * width;
+
+    radioButtonPosX = 0.5688622754491018 * width; 
+    radioButtonPosY = 0.031413612565445025 * height;
+    radioButtonTextSize = 0.01437125748502994 * width;
+
+    columnTextSize = 0.01219047619047619 * (width + height);
+    columnTextPosX = 0.029940119760479042 * width;
+    columnTextPosY = 0.06282722513089005 * height;
+    rowTextSize = 0.01219047619047619 * (width + height);
+    rowTextPosX = 0.32934131736526945 * width;
+    rowTextPosY = 0.06282722513089005 * height;
+
+    XOffset = 0.029940119760479042 * width;
+    YOffset = 0.15706806282722513 * height;
+
+    console.log(50 / width);
+    console.log(150 / height);
+
+    try{
+        removeElements();
+        button.remove();
+        slider1.remove();
+        slider2.remove();
+        radio.remove(); //TODO: Figure out why it duplicates radio (not removed)
+    }catch{
+
+    }
+    
+    /////////////////////////////
+}
+
+function createInputs() //A visuals creating function
+{   
+
+    try{
+        canvas.remove();
+    }catch{
+    }
     
     canvas = createCanvas(windowWidth - 10, windowHeight- 10);
     canvas.position(5,5);
     background(bgCol);
 
+    reloadUI();
+
     button = createButton('OK!');
-    button.position((width - 100), height/20);
+    button.position(okBtnPositionX, okBtnPositionY);
     button.addClass('btn');
-    button.mousePressed(findPath)
+    button.mousePressed(findPath);
+    
 
     
     slider1 = createSlider(5, 50, 5);
-    slider1.position(250, 45);
-    slider1.style('width', '200px');
+    slider1.position(slider1PosX, slider1PosY);
+    slider1.style('width', slider1Width.toString(10) + 'px');
     slider1.input(function()
     {
         x = slider1.value();
@@ -154,9 +225,9 @@ function createInputs() //A visuals creating function
     });
 
     
-    slider2 = createSlider(5, maxY, 5);
-    slider2.position(700, 45);
-    slider2.style('width', '200px');
+    slider2 = createSlider(5, 50, 5);
+    slider2.position(slider2PosX, slider2PosY);
+    slider2.style('width', slider2Width.toString(10) + 'px');
     slider2.input(function()
     {
         y = slider2.value();
@@ -167,12 +238,9 @@ function createInputs() //A visuals creating function
     radio.option(1,'Place Blocks');
     radio.option(2,'Place Start');
     radio.option(3,'Place End');
-    radio.style('width', '700px');
-    radio.style('height', '400px')
-    radio.style('font-size', '32px');
+    radio.style('font-size', radioButtonTextSize.toString(10) + 'px');
     radio.style('color', 'white');
-    radio.position(1000,25);
-
+    radio.position(radioButtonPosX,radioButtonPosY);
 
     createTexts();
 
@@ -180,10 +248,11 @@ function createInputs() //A visuals creating function
 
 function createTexts()
 {
-    textSize(32);
     fill(255,255,255);
-    text('Columns', 50, 60);
-    text('Rows', 550, 60);
+    textSize(columnTextSize);
+    columnText = text('Columns', columnTextPosX, columnTextPosY);
+    textSize(rowTextSize);
+    rowText = text('Rows', rowTextPosX, rowTextPosY);
 }
 
 async function findPath()
@@ -226,3 +295,4 @@ function sleep(millisecondsDuration)
     setTimeout(resolve, millisecondsDuration);
   })
 }
+
