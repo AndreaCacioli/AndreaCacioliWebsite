@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Sorry</title>
+        <title>5 Towers</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -28,12 +28,9 @@
                     <div class="hero-content">
                         <div class="hero-text">
                             
-                            <h1>I'm so Sorry!</h1>
-                            <p>But this page has not been completed yet.</p>
-                            <p><small>Your favourite little nerd is working very hard to keep everithing up to date!</small></p>
-                        </div>
-                        <div class="hero-btn">
-                            <a class="btn" href="./index.html">Go Back!</a>
+                            <h1>5 Towers Game</h1>
+                            <p>Few rules and yet an interest in coding experience.</p>
+                            <p><small>In this section I will showcase a Java swing application containing a very simple game with a few rules that make it very interesting from a coding point of view.</small></p>
                         </div>
                         <div style="margin: 10px;" id="separator"></div>
                         <div class="social">
@@ -43,17 +40,99 @@
                             <a href="https://www.youtube.com/c/TutorialCacioli"><i class="fab fa-youtube"></i></a>
                             <a href="https://www.twitch.tv/polletto_rl"><i class="fab fa-twitch"></i></a>
                         </div>
+                        <a class="btn" style="font-size: 35px; color: white; background-color:black; width: 100%;" href="https://github.com/AndreaCacioli/5TowersGame/archive/refs/heads/main.zip">Download</a>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 d-none d-md-block">
-                    <div class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1588720832100-5ee8c769c294?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1867&q=80" alt="Hero Image"> <!--Ricorda di mettere la tua foto-->
+                    <div class="hero-image" style="margin-bottom: 20px;">
+                        <img src="https://images.unsplash.com/photo-1573689705959-7786e029b31e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" alt="Hero Image">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Hero End -->
+
+    <!-- Body -->
+    <div class="container-fluid">
+        <div id="Lore">
+            <div class="section-header text-left">
+                <p>The Scenario</p>
+                <h2>About The Game</h2>
+            </div>
+            <div class="about-text" style="margin-top: 20px; margin-bottom: 70px; font-weight: lighter;">
+                <h5> 
+                    Everything is magical around you. You try and look around but all you see is just a vague sight. You squint your back cannot really see anything clear. You decide to make a move and go towards the mysterious object. After closer inspection it looks like you find yourself in a place known for its rituals.
+                </h5>
+                <h5>
+                    Five towers disposed in a circle welcome you by enlightening of magical power all at once. Then only a few of them remain turned on while the others seem to lose every magical power they've got in it.
+                </h5>
+                <h5>
+                    What happens then is incredible: you feel the power of the towers flow through your guts. All of a sudden you decide to use that magic power to turn on one of the towers that spontaneously turned off, only to realise that, by doing so, the ones on your sides changed their state too...
+                </h5>
+            </div>
+        </div>
+
+        <div id="Rules" style="display: flex;">
+            <img src="https://images.unsplash.com/photo-1509475826633-fed577a2c71b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2102&q=80" style="height: 300px;">
+            <div>
+                <div class="section-header text-right">
+                    <p>How to Play</p>
+                    <h2>RULES</h2>
+                </div>
+                <div class="about-text" style="margin-top: 20px; margin-bottom: 100px; font-weight: lighter; margin-left: 50px;">
+                    <h5> 
+                        There are <b>five towers</b> that can be either <b>on or off</b>. They are disposed in a circle. Every move has to follow these rules:
+                    </h5>
+                   <ul style="font-weight: 450; color: black; font-size: larger;">
+                       <li>You can only make a move on an off tower.</li>
+                       <li>When you make a move on a tower the nearby towers change their states in this way: if one neighbour was on it goes off and vice versa.</li>
+                       <li>The objective of the game is to have all five towers turn on.</li>
+                   </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="FunFacts">
+            <div class="section-header text-left">
+                <p>As a Programmer</p>
+                <h2>Intresting Things</h2>
+            </div>
+            <div class="about-text" style="margin-top: 20px; margin-bottom: 100px; font-weight: lighter;">
+                <h5> 
+                     This problem was particularly interesting because of the fact that it can be solved with very few moves which are not easy to identify though.
+                </h5>
+                <h5>
+                    The problem could well be infinite if one doesn't pay attention to the moves he makes. This made the programming of a recursive function problematic because you could not suppose that at one point the program will finish and you have to manually insert a cap the number of moves it wants to make.
+                </h5>
+            </div>
+        </div>
+        <div id="Installation" style="display:flex; margin-bottom: 50px;">
+            <img src="./img/5TGif.gif" style="margin: 50px">
+            <div id="Installation-Text">
+                <div class="section-header text-right">
+                    <p>Installation</p>
+                    <h2>Get The Game</h2>
+                </div>
+                <div class="about-text" style="margin-top: 20px; margin-bottom: 100px; font-weight: lighter;">
+                    <h5> 
+                          You can find the game on my GitHub page: at this <a href="https://github.com/AndreaCacioli/5TowersGame">link</a>
+                    </h5>
+                    <h5>
+                        You can download all of the repo if you wanna take a look at the code. Otherwise you can download the zip of the project and then <b>only use the .jar file in the versions folder</b>.
+                    </h5>
+                    <div class="container">
+                        <a class="btn" style="font-size: 35px; color: black; background-color:whitesmoke;" href="https://github.com/AndreaCacioli/5TowersGame/archive/refs/heads/main.zip">Download</a>
+                        <a class="btn" style="font-size: 35px; color: black; background-color: whitesmoke;" href="./index.html">Go Back</a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Body End -->
 
 
      <!-- Pre Loader -->
