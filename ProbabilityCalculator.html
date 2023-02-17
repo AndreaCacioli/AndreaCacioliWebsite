@@ -66,8 +66,27 @@
     </div>
     <div class="about-text" style="margin-top: 20px; margin-bottom: 70px; font-weight: lighter;">
       <h5>
-        We have a deck of cards and we want to know the probability of finding an exact card (of which we could have
-        multiple copies) after n draws. In this problem we do not consider the possibility of a mulligan.
+        We have a deck of $n$ cards and we want to know the probability of finding an exact card of which we have $c$
+        copies after n draws. In this problem we do not consider the possibility of a mulligan.
+      </h5>
+      <h5>
+        Basically we can rewrite this problem as a simple random variable. The random variable that we need is $N$ and
+        it is a geometric distribution, with the exception that the probability of success increases as each failure
+        occurs.
+        We try to give a formal definition to this random variable in the following way:
+      </h5>
+      <h5>
+        First, let
+        \[ p = \frac{c}{n}\]
+        be the probability of finding the card as the first card of the deck. The definition follows from the classic
+        definition of probability.
+
+      </h5>
+      <h5>
+        Then, we can work out how this probability changes as a card different from the one we are looking for is
+        extracted. Let's call $k$ the number of extractions that have already been performed, then
+        \[ p_k = \frac{c}{n-k}\]
+        <!-- TODO Add Chart.js to this file so that we can show graphs-->
       </h5>
     </div>
   </div>
@@ -105,6 +124,17 @@
 <div id="loader" class="show">
   <div class="loader"></div>
 </div>
+
+<!-- Show Latex equations in html -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 
 <!-- JavaScript Libraries -->
