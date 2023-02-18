@@ -2,6 +2,11 @@
 /********* My Additions *********/
 /*******************************/
 
+.options{
+margin-right: 3vh;
+  margin-left: 1vh;
+}
+
 .social {
     display: flex;
     height: 100px;

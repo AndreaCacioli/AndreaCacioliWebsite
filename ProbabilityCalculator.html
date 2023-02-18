@@ -70,7 +70,7 @@
         copies after n draws. In this problem we do not consider the possibility of a mulligan.
       </h5>
       <h5>
-        Basically we can rewrite this problem as a simple random variable. The random variable that we need is $N$ and
+        Basically we can rewrite this problem as a simple random variable. The random variable that we need is $X$ and
         it is a geometric distribution, with the exception that the probability of success increases as each failure
         occurs.
         We try to give a formal definition to this random variable in the following way:
@@ -86,7 +86,45 @@
         Then, we can work out how this probability changes as a card different from the one we are looking for is
         extracted. Let's call $k$ the number of extractions that have already been performed, then
         \[ p_k = \frac{c}{n-k}\]
-        <!-- TODO Add Chart.js to this file so that we can show graphs-->
+        is the probability that the k-th extraction is a success.
+      </h5>
+      <h5>
+        To find out, though, the probability of never having a success in any of the extraction prior to the x-th we
+        need to consider the following distribution:
+        \[P(X = x) = p_x\prod_{i=0}^{x - 1} (1 - p_x)\]
+        which means that we fail in each and every attempt prior to $x$, but then we get a success. So $x$ is the first
+        success.
+      </h5>
+
+      <div style="display: flex; margin-top: 5% margin-bottom: 5%">
+        <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+          <canvas id="myChart"></canvas>
+        </div>
+        <div id="vertical-allignment">
+          <div>
+            <label class="options">Maximum x value</label>
+            <input id="MaxX" type="range" value="20" oninput="update()">
+          </div>
+          <div>
+            <label class="options">$c$ (number of copies of the card)</label>
+            <input id="cInput" type="number" value="4" oninput="update()">
+          </div>
+          <div>
+            <label class="options">$n$ (total cards in the deck)</label>
+            <input id="nInput" type="number" value="60" oninput="update()">
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+      <h5>
+        The previous graph is not really useful since most of the time in card games we need to draw a card by some turn
+        to win the game. Just knowing the various probabilities is pointless then.
+        We instead should use the sum of these probabilities to give us an indication about the turn in which we will be
+        able to perform the action that will make us win the game.
+        Such a sum, in probability theory is called a "Cumulative Distribution" and is sometimes written as $P(X \le x)$
+        which indicates the probability that the random variable $X$ has a value that is less or equal to $x$.
       </h5>
     </div>
   </div>
@@ -154,6 +192,55 @@
 
 <!-- Template Javascript -->
 <script src="js/main.js"></script>
+
+<script>
+  let chart = undefined;
+
+  function update() {
+    if (chart != undefined) {
+      chart.destroy();
+    }
+    const ctx = document.getElementById('myChart');
+    let c = document.getElementById("cInput").value;
+    let n = document.getElementById("nInput").value;
+    const x_bound = document.getElementById("MaxX").value;
+    function fX(x) {
+      let ret = 1;
+      for (let i = 0; i < x; i++) {
+        ret = ret * (1 - c / (n - x));
+      }
+      ret = ret * c / (n - x);
+      if (ret <= 0) ret = 0;
+      return ret * 100;
+    }
+
+    let labels = [];
+    let data = [];
+    for (let x = 0; x <= x_bound; x++) {
+      labels[x] = '' + x;
+      data[x] = fX(x);
+    }
+    chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Probability (percentage) of extracting the card after exactly x draws',
+          data: data,
+          borderWidth: 0.2
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  }
+  update();
+</script>
 </body>
 
 </html>
