@@ -55,7 +55,6 @@
     </div>
   </div>
 </div>
-<!-- Hero End -->
 
 <!-- Body -->
 <div class="container-fluid">
@@ -91,7 +90,7 @@
       <h5>
         To find out, though, the probability of never having a success in any of the extraction prior to the x-th we
         need to consider the following distribution:
-        \[P(X = x) = p_x\prod_{i=0}^{x - 1} (1 - p_x)\]
+        \[P(X = x) = p_x\prod_{i=0}^{x - 1} (1 - p_i)\]
         which means that we fail in each and every attempt prior to $x$, but then we get a success. So $x$ is the first
         success.
       </h5>
@@ -126,6 +125,11 @@
         Such a sum, in probability theory is called a "Cumulative Distribution" and is sometimes written as $P(X \le x)$
         which indicates the probability that the random variable $X$ has a value that is less or equal to $x$.
       </h5>
+
+      <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+        <canvas id="cumulativeCanvas"></canvas>
+      </div>
+
     </div>
   </div>
 
@@ -195,15 +199,10 @@
 
 <script>
   let chart = undefined;
+  let cumulativeChart = undefined;
+
 
   function update() {
-    if (chart != undefined) {
-      chart.destroy();
-    }
-    const ctx = document.getElementById('myChart');
-    let c = document.getElementById("cInput").value;
-    let n = document.getElementById("nInput").value;
-    const x_bound = document.getElementById("MaxX").value;
     function fX(x) {
       let ret = 1;
       for (let i = 0; i < x; i++) {
@@ -213,12 +212,27 @@
       if (ret <= 0) ret = 0;
       return ret * 100;
     }
+    if (chart != undefined) {
+      chart.destroy();
+    }
+    if (cumulativeChart != undefined) {
+      cumulativeChart.destroy();
+    }
+    const ctx = document.getElementById('myChart');
+    const cumulativeCanvas = document.getElementById("cumulativeCanvas");
+    let c = document.getElementById("cInput").value;
+    let n = document.getElementById("nInput").value;
+    const x_bound = document.getElementById("MaxX").value;
 
     let labels = [];
     let data = [];
+    let sums = [];
+    let sum = 0;
     for (let x = 0; x <= x_bound; x++) {
       labels[x] = '' + x;
       data[x] = fX(x);
+      sum += data[x];
+      sums[x] = sum;
     }
     chart = new Chart(ctx, {
       type: 'bar',
@@ -238,6 +252,25 @@
         }
       }
     });
+    cumulativeChart = new Chart(cumulativeCanvas, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Probability (percentage) of having a success by x-th draw',
+          data: sums,
+          borderWidth: 0.2
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
   }
   update();
 </script>
