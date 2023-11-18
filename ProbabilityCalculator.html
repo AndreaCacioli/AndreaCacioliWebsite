@@ -2,136 +2,151 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Probability Calculator</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <title>Probability Calculator</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <!-- CSS Libraries -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-  <!-- Template Stylesheet -->
-  <link href="css/style.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <!-- Hero Start -->
 <div class="hero" id="home">
-  <div class="container-fluid">
-    <div class="row align-items-center">
-      <div class="col-sm-12 col-md-6">
-        <div class="hero-content">
-          <div class="hero-text">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-6">
+                <div class="hero-content">
+                    <div class="hero-text">
 
-            <h1>Probability Calculator</h1>
-            <p>A simple calculator that shows how to solve some simple probability problems taken from the real world.
-            </p>
-            <p><small>I encounter probability problems quite often! Sometimes I play cards and wonder: "What's the
-                probability of...", I sometimes solve the problem using a pen and a piece of paper, today, though, I
-                decided that this will be the place where I keep my calculations so that I can come back to this if
-                needed.</small></p>
-          </div>
-          <div style="margin: 10px;" id="separator"></div>
-          <div class="social">
-            <a href="https://github.com/AndreaCacioli"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/andrea-cacioli-a295161a3/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/andreacacioli99/"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/c/TutorialCacioli"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.twitch.tv/polletto_rl"><i class="fab fa-twitch"></i></a>
-          </div>
+                        <h1>Probability Calculator</h1>
+                        <p>A simple calculator that shows how to solve some simple probability problems taken from the
+                            real world.
+                        </p>
+                        <p><small>I encounter probability problems quite often! Sometimes I play cards and wonder:
+                                "What's the
+                                probability of...", I sometimes solve the problem using a pen and a piece of paper,
+                                today, though, I
+                                decided that this will be the place where I keep my calculations so that I can come back
+                                to this if
+                                needed.</small></p>
+                    </div>
+                    <div style="margin: 10px;" id="separator"></div>
+                    <div class="social">
+                        <a href="https://github.com/AndreaCacioli"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/andrea-cacioli-a295161a3/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/andreacacioli99/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/c/TutorialCacioli"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.twitch.tv/polletto_rl"><i class="fab fa-twitch"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 d-none d-md-block">
+                <div class="hero-image" style="margin-bottom: 20px;">
+                    <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-sm-12 col-md-6 d-none d-md-block">
-        <div class="hero-image" style="margin-bottom: 20px;">
-          <img
-            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80">
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <!-- Body -->
 <div class="container-fluid">
-  <div id="Lore">
-    <div class="section-header text-left">
-      <p>Problem 1</p>
-      <h2>The deck of cards</h2>
-    </div>
-    <div class="about-text" style="margin-top: 20px; margin-bottom: 70px; font-weight: lighter;">
-      <h5>
-        We have a deck of $n$ cards and we want to know the probability of finding an exact card of which we have $c$
-        copies after n draws. In this problem we do not consider the possibility of a mulligan.
-      </h5>
-      <h5>
-        Basically we can rewrite this problem as a simple random variable. The random variable that we need is $X$ and
-        it is a geometric distribution, with the exception that the probability of success increases as each failure
-        occurs.
-        We try to give a formal definition to this random variable in the following way:
-      </h5>
-      <h5>
-        First, let
-        \[ p = \frac{c}{n}\]
-        be the probability of finding the card as the first card of the deck. The definition follows from the classic
-        definition of probability.
-
-      </h5>
-      <h5>
-        Then, we can work out how this probability changes as a card different from the one we are looking for is
-        extracted. Let's call $k$ the number of extractions that have already been performed, then
-        \[ p_k = \frac{c}{n-k}\]
-        is the probability that the k-th extraction is a success.
-      </h5>
-      <h5>
-        To find out, though, the probability of never having a success in any of the extraction prior to the x-th we
-        need to consider the following distribution:
-        \[P(X = x) = p_x\prod_{i=0}^{x - 1} (1 - p_i)\]
-        which means that we fail in each and every attempt prior to $x$, but then we get a success. So $x$ is the first
-        success.
-      </h5>
-
-      <div style="display: flex; margin-top: 5% margin-bottom: 5%">
-        <div class="chart-container" style="position: relative; height: 40%; width: 50%">
-          <canvas id="myChart"></canvas>
+    <div id="Lore">
+        <div class="section-header text-left">
+            <p>Problem 1</p>
+            <h2>The deck of cards</h2>
         </div>
-        <div id="vertical-allignment">
-          <div>
-            <label class="options">Maximum x value</label>
-            <input id="MaxX" type="range" value="20" oninput="update()">
-          </div>
-          <div>
-            <label class="options">$c$ (number of copies of the card)</label>
-            <input id="cInput" type="number" value="4" oninput="update()">
-          </div>
-          <div>
-            <label class="options">$n$ (total cards in the deck)</label>
-            <input id="nInput" type="number" value="60" oninput="update()">
-          </div>
+        <div class="about-text" style="margin-top: 20px; margin-bottom: 70px; font-weight: lighter;">
+            <h5>
+                We have a deck of $n$ cards and we want to know the probability of finding an exact card of which we
+                have $c$
+                copies after n draws. In this problem we do not consider the possibility of a mulligan.
+            </h5>
+            <h5>
+                Basically we can rewrite this problem as a simple random variable. The random variable that we need is
+                $X$ and
+                it is a geometric distribution, with the exception that the probability of success increases as each
+                failure
+                occurs.
+                We try to give a formal definition to this random variable in the following way:
+            </h5>
+            <h5>
+                First, let
+                \[ p = \frac{c}{n}\]
+                be the probability of finding the card as the first card of the deck. The definition follows from the
+                classic
+                definition of probability.
+
+            </h5>
+            <h5>
+                Then, we can work out how this probability changes as a card different from the one we are looking for
+                is
+                extracted. Let's call $k$ the number of extractions that have already been performed, then
+                \[ p_k = \frac{c}{n-k}\]
+                is the probability that the k-th extraction is a success.
+            </h5>
+            <h5>
+                To find out, though, the probability of never having a success in any of the extraction prior to the
+                x-th we
+                need to consider the following distribution:
+                \[P(X = x) = p_x\prod_{i=0}^{x - 1} (1 - p_i)\]
+                which means that we fail in each and every attempt prior to $x$, but then we get a success. So $x$ is
+                the first
+                success.
+            </h5>
+
+            <div style="display: flex; margin-top:5%; margin-bottom:5%;">
+                <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div id="vertical-allignment">
+                    <div>
+                        <label class="options">Maximum x value</label>
+                        <input id="MaxX" type="range" value="20" oninput="update()">
+                    </div>
+                    <div>
+                        <label class="options">$c$ (number of copies of the card)</label>
+                        <input id="cInput" type="number" value="4" oninput="update()">
+                    </div>
+                    <div>
+                        <label class="options">$n$ (total cards in the deck)</label>
+                        <input id="nInput" type="number" value="60" oninput="update()">
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <h5>
+                The previous graph is not really useful since most of the time in card games we need to draw a card by
+                some turn
+                to win the game. Just knowing the various probabilities is pointless then.
+                We instead should use the sum of these probabilities to give us an indication about the turn in which we
+                will be
+                able to perform the action that will make us win the game.
+                Such a sum, in probability theory is called a "Cumulative Distribution" and is sometimes written as $P(X
+                \le x)$
+                which indicates the probability that the random variable $X$ has a value that is less or equal to $x$.
+            </h5>
+
+            <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+                <canvas id="cumulativeCanvas"></canvas>
+            </div>
+
         </div>
-      </div>
-
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-      <h5>
-        The previous graph is not really useful since most of the time in card games we need to draw a card by some turn
-        to win the game. Just knowing the various probabilities is pointless then.
-        We instead should use the sum of these probabilities to give us an indication about the turn in which we will be
-        able to perform the action that will make us win the game.
-        Such a sum, in probability theory is called a "Cumulative Distribution" and is sometimes written as $P(X \le x)$
-        which indicates the probability that the random variable $X$ has a value that is less or equal to $x$.
-      </h5>
-
-      <div class="chart-container" style="position: relative; height: 40%; width: 50%">
-        <canvas id="cumulativeCanvas"></canvas>
-      </div>
-
     </div>
-  </div>
 
 </div>
 <!-- Body End -->
@@ -139,17 +154,17 @@
 
 <!-- Pre Loader -->
 <div id="loader" class="show">
-  <div class="loader"></div>
+    <div class="loader"></div>
 </div>
 
 <!-- Show Latex equations in html -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']]
-    }
-  };
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+    };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -173,82 +188,154 @@
 <script src="js/main.js"></script>
 
 <script>
-  let chart = undefined;
-  let cumulativeChart = undefined;
+    let chart = undefined;
+    let cumulativeChart = undefined;
 
 
-  function update() {
-    function fX(x) {
-      let ret = 1;
-      for (let i = 0; i < x; i++) {
-        ret = ret * (1 - c / (n - x));
-      }
-      ret = ret * c / (n - x);
-      if (ret <= 0) ret = 0;
-      return ret * 100;
-    }
-    if (chart != undefined) {
-      chart.destroy();
-    }
-    if (cumulativeChart != undefined) {
-      cumulativeChart.destroy();
-    }
-    const ctx = document.getElementById('myChart');
-    const cumulativeCanvas = document.getElementById("cumulativeCanvas");
-    let c = document.getElementById("cInput").value;
-    let n = document.getElementById("nInput").value;
-    const x_bound = document.getElementById("MaxX").value;
-
-    let labels = [];
-    let data = [];
-    let sums = [];
-    let sum = 0;
-    for (let x = 0; x <= x_bound; x++) {
-      labels[x] = '' + x;
-      data[x] = fX(x);
-      sum += data[x];
-      sums[x] = sum;
-    }
-    chart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'Probability (percentage) of extracting the card after exactly x draws',
-          data: data,
-          borderWidth: 0.2
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+    function update() {
+        function fX(x) {
+            let ret = 1;
+            for (let i = 0; i < x; i++) {
+                ret = ret * (1 - c / (n - x));
+            }
+            ret = ret * c / (n - x);
+            if (ret <= 0) ret = 0;
+            return ret * 100;
         }
-      }
-    });
-    cumulativeChart = new Chart(cumulativeCanvas, {
-      type: 'bar',
-      data: {
-        labels: labels,
-        datasets: [{
-          label: 'Probability (percentage) of having a success by x-th draw',
-          data: sums,
-          borderWidth: 0.2
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+        if (chart != undefined) {
+            chart.destroy();
         }
-      }
-    });
+        if (cumulativeChart != undefined) {
+            cumulativeChart.destroy();
+        }
+        const ctx = document.getElementById('myChart');
+        const cumulativeCanvas = document.getElementById("cumulativeCanvas");
+        let c = document.getElementById("cInput").value;
+        let n = document.getElementById("nInput").value;
+        const x_bound = document.getElementById("MaxX").value;
 
-  }
-  update();
+        let labels = [];
+        let data = [];
+        let sums = [];
+        let sum = 0;
+        for (let x = 0; x <= x_bound; x++) {
+            labels[x] = '' + x;
+            data[x] = fX(x);
+            sum += data[x];
+            sums[x] = sum;
+        }
+        chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Probability (percentage) of extracting the card after exactly x draws',
+                    data: data,
+                    borderWidth: 0.2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        cumulativeChart = new Chart(cumulativeCanvas, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Probability (percentage) of having a success by x-th draw',
+                    data: sums,
+                    borderWidth: 0.2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    }
+    update();
 </script>
+<div class="container-fluid">
+    <div id="Lore">
+        <div class="section-header text-left">
+            <p>Problem 2</p>
+            <h2>The Impossible Button Game</h2>
+        </div>
+        <div class="about-text" style="margin-top: 20px; margin-bottom: 70px; font-weight: lighter;">
+            <h5>
+                A new game is out: its name is "The Impossible Button Game"!
+                In this game you have to press a big red button. If you press it you advance to the next level and there
+                are 100 levels. But wait, there's a catch! Every time you pass a level the "difficulty" increases (as in
+                all good games) reducing by 1% the probability of the button to activate the following time.
+                If you press a button and it works, it doesn't immediately send you to the next level, you have to
+                finish all your attempts.
+                At the very beginning of the game you are given a choice: how many attempts do you want to try and press
+                the button at each level? Be careful: if you choose a too low number you are never going to win, choose
+                a too high number and you are going to wait for a very long time before you advance to the next level.
+            </h5>
+            <h5>
+                We are now going to study the problem a bit and we'll see how different values for our choice will
+                change our probability of success.
+            </h5>
+            <h5>
+                First of all let's revise the geometric distribution:
+                Given the random variable $G = \mathcal{G}(p)$
+                $$
+                p(k) = P(G = k) = (1-p)^{k-1}p
+                $$
+                $$
+                P(k) = P(G \le k) = 1 - (1 - p)^k
+                $$
+                The probability mass function tells us the probability of winning after $k-1$ failures.
+                The cumulative distribution function, instead, tells us how likely we are to hit a win by $k$ or less
+                trials.
+            </h5>
+            <h5>
+                The game is basically a bunch of geometric random variables stacked together and played sequentially:
+                let's calle
+                $$ G_1 = \mathcal{G}(1) $$
+                $$ G_2 = \mathcal{G}(0.99) $$
+                $$ G_3 = \mathcal{G}(0.98) $$
+                $$...$$
+                $$ G_{100} = \mathcal{G}(0.01) $$
+            </h5>
+            <h5>
+                The probabilities of success are in $Ps = (1, 0.99, 0.98, ..., 0.01)$
+                Where $p_i$ is the $i$th element of $Ps$
+            </h5>
+            <h5>
+                For the sake of simplicity let's call $Qs = (0, 0.01, 0.02, ..., 0.99)$ the probabilities of failure.
+                Where $q_i$ is the $i$th element of $Qs$
+            </h5>
+            <h5>
+                Let's now call $W(k)$ a cumulative distribution function that tells us the probability of winning the
+                whole game (all 100 levels) using $k$ trials for each level.
+            </h5>
+            <h5>
+                Then $W(k)$ can be written like this:
+                $$ W(k) = P(G_1 \le k)P(G_2 \le k)...P(G_{100} \le k) = $$
+                $$ P_1(k)P_2(k)...P_{100}(k) = $$
+                $$ \prod_{i = 1}^{100} P_i(k) = \prod_{i = 1}^{100} 1 - (1-p_i)^k = $$
+                $$ \prod_{i = 1}^{100} 1 - q_i^k$$
+            </h5>
+            <h5>
+                We will now calculate and visualize this function $W$:
+            </h5>
+
+        </div>
+
+    </div>
+</div>
+
 </body>
 
 </html>
