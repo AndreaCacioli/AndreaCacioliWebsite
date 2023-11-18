@@ -107,14 +107,14 @@
                 success.
             </h5>
 
-            <div style="display: flex; margin-top:5%; margin-bottom:5%;">
-                <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+            <div style="display: flex;justify-content: space-evenly; margin-top:5%; margin-bottom:5%;">
+                <div class="chart-container" style="height: 40%; width: 50%">
                     <canvas id="myChart"></canvas>
                 </div>
                 <div id="vertical-allignment">
                     <div>
                         <label class="options">Maximum x value</label>
-                        <input id="MaxX" type="range" value="20" oninput="update()">
+                        <input id="MaxX" type="range" min="10" max="40" value="20" oninput="update()">
                     </div>
                     <div>
                         <label class="options">$c$ (number of copies of the card)</label>
@@ -141,8 +141,10 @@
                 which indicates the probability that the random variable $X$ has a value that is less or equal to $x$.
             </h5>
 
-            <div class="chart-container" style="position: relative; height: 40%; width: 50%">
-                <canvas id="cumulativeCanvas"></canvas>
+            <div style="display: flex; justify-content: space-around;">
+                <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+                    <canvas id="cumulativeCanvas"></canvas>
+                </div>
             </div>
 
         </div>
@@ -328,7 +330,69 @@
                 $$ \prod_{i = 1}^{100} 1 - q_i^k$$
             </h5>
             <h5>
-                We will now calculate and visualize this function $W$:
+                We will now calculate and visualize this function $W$, along with it comes an estimate of the time it
+                would take for you to complete the game (considering one second per button press):
+            </h5>
+            <div style="display: flex; justify-content: space-between;">
+                <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+                    <canvas id="Wcanvas"></canvas>
+                </div>
+                <div class="chart-container" style="position: relative; height: 40%; width: 50%">
+                    <canvas id="timecanvas"></canvas>
+                </div>
+            </div>
+            <script>
+                let Qs = []
+                for (i = 0; i <= 99; i++) {
+                    Qs.push(i / 100);
+                }
+                function W(k) {
+                    let res = 1;
+                    for (i = 0; i < Qs.length; i++) {
+                        res *= 1 - Math.pow(Qs[i], k);
+                    }
+                    return res;
+                }
+
+                let Wcanvas = document.getElementById("Wcanvas")
+                let timecanvas = document.getElementById("timecanvas")
+                const labels = [];
+                const Ws = [];
+                const times = [];
+                for (k = 10; k < 200; k += 10) {
+                    labels.push("k = " + k);
+                    Ws.push(W(k));
+                    times.push(k * 100 / 3600);
+                }
+                const Wchart = new Chart(Wcanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Probability of having a success by x-th draw',
+                            data: Ws,
+                            borderWidth: 0.2
+                        },
+                        ]
+                    },
+                });
+                const timechart = new Chart(timecanvas, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Time spent in hours',
+                            data: times,
+                            backgroundColor: 'pink',
+                            borderWidth: 0.2
+                        },
+                        ]
+                    },
+                });
+            </script>
+            <h5>
+                So, to conclude this: a wise choice of $k$ would be around $140$ attempts per level that would lead you
+                to the victory about $70\%$ of the times in less than 4 hours.
             </h5>
 
         </div>
